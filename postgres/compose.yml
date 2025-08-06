@@ -1,0 +1,23 @@
+services:
+  postgres:
+    restart: unless-stopped
+    image: postgres:17.4
+    shm_size: 128mb
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - data:/var/lib/postgresql/data
+    ports:
+      - ${APP_PORT}:5432
+    networks:
+      - kotakin_net
+
+networks:
+  kotakin_net:
+    external: true
+
+volumes:
+  data:

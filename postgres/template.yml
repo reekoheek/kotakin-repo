@@ -1,0 +1,8 @@
+name: PostgreSQL
+env_configs:
+  - name: APP_PORT
+    label: Application Port
+    default: "5432"
+  - name: POSTGRES_PASSWORD
+    label: Postgres User Password
+    default: password

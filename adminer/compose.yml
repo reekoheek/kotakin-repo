@@ -1,0 +1,12 @@
+services:
+  adminer:
+    restart: unless-stopped
+    image: adminer:4.8.1
+    ports:
+      - ${APP_PORT}:8080
+    networks:
+      - kotakin_net
+
+networks:
+  kotakin_net:
+    external: true

@@ -1,0 +1,5 @@
+name: CloudBeaver
+env_configs:
+  - name: APP_PORT
+    label: Application Port
+    default: "8978"

@@ -1,0 +1,8 @@
+name: Microsoft SQL Server
+env_configs:
+  - name: APP_PORT
+    label: Application Port
+    default: "1433"
+  - name: MSSQL_SA_PASSWORD
+    label: SA Password
+    default: P4ssw0rd

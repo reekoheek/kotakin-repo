@@ -1,0 +1,8 @@
+name: MariaDB
+env_configs:
+  - name: APP_PORT
+    label: Application Port
+    default: "3306"
+  - name: MYSQL_ROOT_PASSWORD
+    label: MySQL Root Password
+    default: password

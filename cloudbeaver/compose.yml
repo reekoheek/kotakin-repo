@@ -1,0 +1,17 @@
+services:
+  cloudbeaver:
+    restart: unless-stopped
+    image: dbeaver/cloudbeaver:25.0.0
+    volumes:
+      - data:/opt/cloudbeaver/workspace
+    ports:
+      - ${APP_PORT}:8978
+    networks:
+      - kotakin_net
+
+networks:
+  kotakin_net:
+    external: true
+
+volumes:
+  data:
